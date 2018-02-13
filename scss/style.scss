@@ -8,7 +8,9 @@ $gr: #464646;
 body {
     font-family: 'Lato', sans-serif;
     color: white;
+
     background-color: #212121;
+    background-color: black;
 }
 
 a {
@@ -38,6 +40,7 @@ header {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    background-color: #212121;
 }
 
 .top_panel div {
@@ -479,14 +482,15 @@ nav a:hover {
 
 //===FEATURED PRODUCTS ====
 
-#about>div:first-child {
-    width: 500px;
-    padding: 50px;
-    margin: 0 auto;
-   // margin-left: 20vw;
+#about {
+    background-color: #212121;
+}
+#about .container {
+    padding: 3%;
     text-align: center;
     align-self: center;
 }
+
 
 #about h5 {
     font-size: 20px;
@@ -659,29 +663,43 @@ nav a:hover {
 
 }
 
-//== locations ==
+//== locations & information ==
 
-#locations {
+#locations, #contacts {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     box-sizing: border-box;
     padding: 60px;
     background-color: #000;
-
 }
 #locations div {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 20vw;
- //   border: 1px solid white;
+ //   border-bottom: 1px solid white;
 }
 
-#locations h6 {
+.section_end {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.end_hl {
+    border-top: 2px solid #464646;
+    width: 80vw;
+    background-color: black;
+}
+#locations h6, #contacts h6 {
     font-size: 18px;
     font-weight: 500;
 }
 
-#locations .hl {
+#locations .hl, #contacts .hl {
     width: 40%;
     margin: 20px 0 20px 0;
 }
@@ -691,7 +709,7 @@ nav a:hover {
     font-weight: bolder;
 }
 
-.newsletter p {
+.newsletter p, #contacts p {
     color: #494141;
     font-size: 14px;
     margin-bottom: 20px;
@@ -729,4 +747,85 @@ nav a:hover {
 
 .main_slider img {
     height: 100%;
+}
+
+@media screen and (max-width: 850px){
+
+    #locations div {
+        width: 40vw;
+        margin-bottom: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 710px){
+    #locations div {
+        width: 80vw;
+    }
+}
+
+//=== information ===
+
+#contacts>div {
+    width: 25vw;
+    padding: 20px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact img {
+    max-height: 12px;
+    margin-right: 15px;
+}
+
+.contact p {
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 1050px){
+    #contacts>div {
+        width: 80vw;
+    }
+    
+}
+
+
+//===footer ====
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+footer>div {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bottom_logo {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.bottom_logo span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.bottom_logo p {
+    font-weight: lighter;
+    color: #6f6f6f;
+    font-size: 15px;
+}
+
+.bottom_logo img {
+    padding: 10px;
 }
