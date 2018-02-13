@@ -562,7 +562,9 @@ nav a:hover {
 
 #reviews {
     background: url("../images/cars.png");
-    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -609,15 +611,31 @@ nav a:hover {
     background-color: #1c1c1c;
 }
 
-@media screen and (min-width: 1100px){
+.vl {
+    border-left: 1px solid white;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+ //   top: 0;
+}
+
+@media screen and (max-width: 850px){
+
     .vl {
-        border-left: 1px solid white;
-        height: 150px;
-        position: absolute;
-        left: 50%;
-        margin-left: -3px;
-     //   top: 0;
+        display: none;
     }
+
+    #reviews>div:first-child {
+        border-bottom: 1px solid white;
+        margin-bottom: 20px;
+    }
+
+    #reviews button {
+        margin-bottom: 20px;
+    }
+
+
 }
 
 //== locations ==
