@@ -63,4 +63,20 @@ $(document).ready(function(){
 });
 
 
+function resizeHeaderOnScroll() {
+  var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+  shrinkOn = 200,
+  headerEl = document.querySelector(".top_arrow");
+  
+  if (distanceY > shrinkOn) {
+    headerEl.classList.add("visible");
+    headerEl.classList.remove("hidden");
+  } else {
+    headerEl.classList.remove("visible");
+    headerEl.classList.add("hidden");
+  }
+}
+
+window.addEventListener('scroll', resizeHeaderOnScroll);
+
 

@@ -307,7 +307,6 @@ nav a:hover {
     }
 
 
-
     .change .bar1 {
         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
         transform: rotate(-45deg) translate(0px, 5px);
@@ -347,7 +346,24 @@ nav a:hover {
     }
 }
 
+//==top arrow ==
 
+.top_arrow img {
+    width: 80px;
+    opacity: 0.5;
+    position: fixed;
+    top: 85vh;
+    z-index: 1000;
+    right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
 //=== services ===
 
 #services {
@@ -446,6 +462,10 @@ nav a:hover {
 
     #services>div:last-child {
         background-color: #1c1c1c;
+    }
+
+    .top_arrow img {
+        width: 40px;
     }
 }
 
@@ -629,6 +649,7 @@ nav a:hover {
     #reviews>div:first-child {
         border-bottom: 1px solid white;
         margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     #reviews button {
