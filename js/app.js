@@ -34,9 +34,6 @@ $(document).ready(function(){
         }
         
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
@@ -49,19 +46,6 @@ $(document).ready(function(){
     autoplaySpeed: 1000,
     arrows: false
   });
-
-  /*
-  $('.slider').slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 700,
-    arrows: false
-  });
-  */
-});
-
 
 function resizeHeaderOnScroll() {
   var distanceY = window.pageYOffset || document.documentElement.scrollTop,
@@ -79,4 +63,17 @@ function resizeHeaderOnScroll() {
 
 window.addEventListener('scroll', resizeHeaderOnScroll);
 
+//smooth scroll
 
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
