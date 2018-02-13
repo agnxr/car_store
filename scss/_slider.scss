@@ -1,0 +1,99 @@
+//===FEATURED PRODUCTS ====
+
+#about {
+    background-color: #212121;
+}
+#about .container {
+    padding: 3%;
+    text-align: center;
+    align-self: center;
+}
+
+#about h5 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hl {
+    width: 120px;
+    margin: 0 auto;
+    border-bottom: 4px solid #6e2128;
+}
+
+// === slider ===
+
+.fa-star {
+    color: black;
+    margin-top: 20px;
+}
+.checked {
+    color:#f43346;
+}
+
+.slider_item {
+    height: 400px;
+    margin: 20px;
+    box-sizing: border-box;
+    background-color:#303030;
+    cursor: pointer;    
+}
+
+.slider_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+
+.slider_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 30%;
+}
+.slider h5 {
+    color: #f43346;
+    font-size: 16px;
+}
+
+.slider p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.slider img {
+    width: 80%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 610px){
+
+    .slider_item {
+        max-height: 500px;
+        margin: 20px 70px 20px 70px;
+    }
+
+    .slider_img {
+        height: 70%;
+        max-width: 300px;
+        margin: 0 15% 5% 15%;
+    }
+
+    .slider_txt {
+        height: 15%;
+    }
+
+}
+
+@media screen and (max-width: 390px){
+
+    .slider_item {
+        overflow: hidden;
+        margin: 10px;
+    }
+
+}

@@ -1,0 +1,80 @@
+//=== section with buttons ===
+
+#reviews {
+    background: url("../images/cars.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#reviews>div:not(.vl) {
+    width: 49vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#reviews h4 {
+    font-size: 50px;
+}
+
+#reviews h5 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#reviews p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#reviews button {
+  background-color: rgb(156, 28, 40);
+  width: 190px;
+  height: 38px;
+  border-color: transparent;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#reviews button:hover, .sbm:hover {
+    background-color: #1c1c1c;
+}
+
+.vl {
+    border-left: 1px solid white;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+ //   top: 0;
+}
+
+@media screen and (max-width: 850px){
+
+    .vl {
+        display: none;
+    }
+
+    #reviews>div:first-child {
+        border-bottom: 1px solid white;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    #reviews button {
+        margin-bottom: 20px;
+    }
+
+
+}
