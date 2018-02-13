@@ -85,5 +85,5 @@ window.addEventListener('scroll', resizeHeaderOnScroll);
       });
     } 
   });
-
+  
 });

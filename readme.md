@@ -12,7 +12,7 @@ https://agnxr.github.io/car_store/
 
 Screen:
 
-![screen](https://user-images.githubusercontent.com/32043294/36165630-7cc832a2-10f0-11e8-86b6-158b753f6c38.png)
+![screen](https://user-images.githubusercontent.com/32043294/36165895-493f4b22-10f1-11e8-8c5c-e69de9bd60ea.png)
 
 
 
