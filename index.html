@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <nav>
+        <nav class="desktop_menu">
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#services">SERVICES</a></li>
@@ -81,10 +81,45 @@
                 <li><a href="#contacts">CONTACTS</a></li>
             </ul>
         </nav>
+
+        <div class="mobile_bar">
+            <img src="images/panel/sph.png">
+            <p>+123 456 7890</p>
+            <p>
+                MON-FRI: 8:30-7:30PM; SAT-SUN: 9:30AM-4:30PM
+            </p>
+        </div>
+
+
+
+        <div class="xmenu">
+            <nav class="page-navigation clearfix mobile">
+                <label class="navigation-toggle" for="input-toggle" onclick="myFunction(this)">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                    <span class="bar3"></span>
+                </label>
+    
+                <input type="checkbox" id="input-toggle">
+                <ul class="menu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#reviews">REVIEWS</a></li>
+                    <li><a href="#locations">LOCATIONS</a></li>
+                    <li><a href="#contacts">CONTACTS</a></li>
+                </ul>
+            </nav>
+    </div>
+
     </header>
 
     <section id="home">
-        <img src="images/car.png">
+        <div class="main_slider">
+            <img src="images/car.png">
+            <img src="images/car2.png">
+            <img src="images/car3.png">
+        </div>
     </section>
 
     <section id="services">
