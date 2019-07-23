@@ -45,17 +45,19 @@ header {
     flex-wrap: wrap;
     div {
         margin: 15px;
-        &:last-child {
-            border-left: 2px solid $gr;
-            cursor: pointer;
-            img {
-                margin-left: 20px;
-            }
-        }
     }
     img {
         margin-right: 5px;
     }
+}
+
+.top_panel div:last-child {
+    border-left: 2px solid $gr;
+    cursor: pointer;
+}
+
+.top_panel div:last-child img {
+    margin-left: 20px;
 }
 
 .main_panel {
@@ -75,17 +77,16 @@ header {
     text-align: center;
     flex-direction: column;
     border-left: 2px solid $gr;
-    p {
-        margin-bottom: 10px;
-        margin-left: 20px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-    img {
-        margin-bottom: 10px;
-        margin-left: 20px;
-        cursor: pointer;
-    }
+}
+
+.top_icon img, .top_icon p {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.top_icon p {
+    margin-top: 10px;
 }
 
 .tel, .tel div {
@@ -96,6 +97,7 @@ header {
 .tel img {
     margin-right: 20px;
     max-height: 30px;
+
 }
 
 .tel p, .mobile_bar p {
@@ -132,13 +134,14 @@ nav {
         li {
             margin: 20px;
             list-style-type: none;
-            a {
-                color: white;
-                &:hover {
-                    color: #f43346;
-                }
-            }
         }
+    }
+}
+
+nav a {
+    color: white;
+    &:hover {
+        color: #f43346;
     }
 }
 
@@ -152,10 +155,9 @@ nav {
     padding-top: 20px;
     padding-bottom: 30px;
     display: none;
-}
-
-.mobile_bar p {
-    display: inline-block;
+    p {
+        display: inline-block;
+    }
 }
 
 .mobile_bar>* {
@@ -174,7 +176,6 @@ nav {
         display: block;
     }
 }
-
 
 .xmenu {
     display: none;
@@ -210,21 +211,21 @@ nav {
         margin:0;
         font-size:0;
         display: block;
-        li {
-            display: inline-block;
-            max-width:100px;
-            min-width:15%;
-            text-align: center;
-            a {
-                font: 14px/60px 'Lato', sans-serif;
-                color:#eee;
-                height:60px;
-                display: block;
-                text-decoration: none;
-            }
-        }
     }
 
+    .mobile ul li {
+        display: inline-block;
+        max-width:100px;
+        min-width:15%;
+        text-align: center;
+    }
+    .mobile ul li a {
+        font: 14px/60px 'Lato', sans-serif;
+        color:#eee;
+        height:60px;
+        display: block;
+        text-decoration: none;
+    }
     .mobile ul li a:hover, .mobile ul li a:active, .mobile ul li a:focus {
         color:#f43346;
     }
@@ -253,15 +254,15 @@ nav {
         cursor:pointer;
         left: 0;
         position: fixed;
-        span {
-            background-color: #F5F5F5;
-            border-radius: 1px 1px 1px 1px;
-            display:block;
-            height:2px;
-            width:18px;
-            margin:4px auto;
-        }
-    
+    }
+
+    .navigation-toggle span {
+        background-color: #F5F5F5;
+        border-radius: 1px 1px 1px 1px;
+        display:block;
+        height:2px;
+        width:18px;
+        margin:4px auto;
     }
 
     .mobile ul {
@@ -271,7 +272,6 @@ nav {
         transition:max-height 0.35s ease 0s;
         -webkit-transition:max-height 0.35s ease 0s;
         -moz-transition:max-height 0.35s ease 0s;
-
     }
 
     .mobile #input-toggle:checked + ul {
@@ -282,11 +282,11 @@ nav {
         width:100%;
         max-width: 100%;
         min-width:0;
-        a {
-            display: block;
-            text-align: center;
-            width: 100%;
-        }
+    }
+    .mobile ul li a {
+        display: block;
+        text-align: center;
+        width: 100%;
     }
 
     .change .bar1 {
