@@ -1,20 +1,14 @@
-﻿// == preloader ==
-
-$(window).load(function() {
+﻿$(window).load(function() {
   $("#status").fadeOut(); 
   $("#preloader").delay(500).fadeOut("slow"); 
 })
 
-// == hambuerger menu (X) ==
 function myFunction(x) {
   x.classList.toggle("change");
 }
 
-// === slider 
 $(document).ready(function(){
-//...with products:
   $('.slider').slick({
-
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -45,7 +39,6 @@ $(document).ready(function(){
     ]
   });
 
-//...on main section:
   $('.main_slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -55,7 +48,6 @@ $(document).ready(function(){
     arrows: false
   });
 
-  //=== bottom arrow ===
 function resizeHeaderOnScroll() {
   var distanceY = window.pageYOffset || document.documentElement.scrollTop,
   shrinkOn = 200,
@@ -71,9 +63,6 @@ function resizeHeaderOnScroll() {
 }
 
 window.addEventListener('scroll', resizeHeaderOnScroll);
-
-//=== smooth scroll ===
-
   $("a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();

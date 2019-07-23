@@ -27,7 +27,6 @@ gen### Sass template
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
-gulpfile.js
 node_modules/
-package.json
+package-lock.json
 

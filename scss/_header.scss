@@ -8,7 +8,6 @@ $gr: #464646;
 body {
     font-family: 'Lato', sans-serif;
     color: white;
-
     background-color: #212121;
     background-color: black;
 }
@@ -17,10 +16,9 @@ a {
     text-decoration: none;
     color: #f43346;
     font-size: 14px;
-}
-
-a:hover {
-    color: lightgrey;
+    &:hover {
+        color: lightgrey;
+    }
 }
 
 .top_panel, .main_panel, .panel_icons {
@@ -43,26 +41,21 @@ header {
     background-color: #212121;
 }
 
-.top_panel div {
-    margin: 15px;
-}
-
-.top_panel img {
-    margin-right: 5px;
-}
-
 .top_panel {
     flex-wrap: wrap;
-}
-
-//lupa
-.top_panel div:last-child {
-    border-left: 2px solid $gr;
-    cursor: pointer;
-}
-
-.top_panel div:last-child img {
-    margin-left: 20px;
+    div {
+        margin: 15px;
+        &:last-child {
+            border-left: 2px solid $gr;
+            cursor: pointer;
+            img {
+                margin-left: 20px;
+            }
+        }
+    }
+    img {
+        margin-right: 5px;
+    }
 }
 
 .main_panel {
@@ -70,7 +63,6 @@ header {
     padding: 15px;
     border-color: transparent;
 }
-
 
 .panel_icons div {
     margin-left: 20px;
@@ -83,16 +75,17 @@ header {
     text-align: center;
     flex-direction: column;
     border-left: 2px solid $gr;
-}
-
-.top_icon img, .top_icon p {
-    margin-bottom: 10px;
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.top_icon p {
-    margin-top: 10px;
+    p {
+        margin-bottom: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    img {
+        margin-bottom: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
 }
 
 .tel, .tel div {
@@ -103,7 +96,6 @@ header {
 .tel img {
     margin-right: 20px;
     max-height: 30px;
-
 }
 
 .tel p, .mobile_bar p {
@@ -126,8 +118,6 @@ header {
     letter-spacing: 3px;
 }
 
-//=== nav ===
-
 nav {
     width: 100%;
     background-color: black;
@@ -135,27 +125,22 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+        li {
+            margin: 20px;
+            list-style-type: none;
+            a {
+                color: white;
+                &:hover {
+                    color: #f43346;
+                }
+            }
+        }
+    }
 }
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80vw;
-}
-
-nav li {
-    margin: 20px;
-    list-style-type: none;
-}
-
-nav a {
-    color: white;
-}
-
-nav a:hover {
-    color: #f43346;
-}
-
 
 #home img {
     width: 100%;
@@ -191,8 +176,6 @@ nav a:hover {
 }
 
 
-//=== MOBILE MENU ====
-
 .xmenu {
     display: none;
 }
@@ -221,31 +204,29 @@ nav a:hover {
         background-color: rgba(0, 0, 0, 0.68);
     }
 
-    /* stylowanie dla mobilnych wersji */
     .mobile ul {
         list-style: none;
         padding:0;
         margin:0;
         font-size:0;
         display: block;
+        li {
+            display: inline-block;
+            max-width:100px;
+            min-width:15%;
+            text-align: center;
+            a {
+                font: 14px/60px 'Lato', sans-serif;
+                color:#eee;
+                height:60px;
+                display: block;
+                text-decoration: none;
+            }
+        }
     }
 
-    .mobile ul li {
-        display: inline-block;
-        max-width:100px;
-        min-width:15%;
-        text-align: center;
-    }
-    .mobile ul li a {
-        font: 14px/60px 'Lato', sans-serif;
-        color:#eee;
-        height:60px;
-        display: block;
-        text-decoration: none;
-    }
     .mobile ul li a:hover, .mobile ul li a:active, .mobile ul li a:focus {
         color:#f43346;
-      //  width: 100%;
     }
 
     #input-toggle {
@@ -272,16 +253,15 @@ nav a:hover {
         cursor:pointer;
         left: 0;
         position: fixed;
-    }
-
-    /*hamburger */
-    .navigation-toggle span {
-        background-color: #F5F5F5;
-        border-radius: 1px 1px 1px 1px;
-        display:block;
-        height:2px;
-        width:18px;
-        margin:4px auto;
+        span {
+            background-color: #F5F5F5;
+            border-radius: 1px 1px 1px 1px;
+            display:block;
+            height:2px;
+            width:18px;
+            margin:4px auto;
+        }
+    
     }
 
     .mobile ul {
@@ -302,13 +282,12 @@ nav a:hover {
         width:100%;
         max-width: 100%;
         min-width:0;
+        a {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
     }
-    .mobile ul li a {
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
-
 
     .change .bar1 {
         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
