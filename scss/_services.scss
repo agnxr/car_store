@@ -1,5 +1,3 @@
-//=== services ===
-
 #services {
     display: flex;
     justify-content: center;
@@ -22,27 +20,23 @@
 }
 
 .service_desc {
-//    border: 1px solid wheat;
     flex-direction: column;
     height: 100%;
     display: flex;
     justify-content: center;
-}
-
-.service_desc h5 {
-    font-weight: 500;
-    font-size: 2.5vw;
-    z-index: 999;
-}
-
-.service_desc p {
-    font-size: 1.3vw;
-    color: #6f6f6f;
-    z-index: 999;
+    h5 {
+        font-weight: 500;
+        font-size: 2.5vw;
+        z-index: 999;
+    }
+    p {
+        font-size: 1.3vw;
+        color: #6f6f6f;
+        z-index: 999;
+    }
 }
 
 .service_img {
-
     position: absolute;
     max-width: 60%;
     max-height: 80%;

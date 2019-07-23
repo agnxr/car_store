@@ -1,5 +1,3 @@
-//=== section with buttons ===
-
 #reviews {
     background: url("../images/cars.png");
     background-size: cover;
@@ -9,6 +7,18 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    h4 {
+        font-size: 50px;
+    }
+    h5 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
 }
 
 #reviews>div:not(.vl) {
@@ -18,21 +28,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-#reviews h4 {
-    font-size: 50px;
-}
-
-#reviews h5 {
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-#reviews p {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 20px;
 }
 
 #reviews button {
@@ -57,11 +52,9 @@
     position: absolute;
     left: 50%;
     margin-left: -3px;
- //   top: 0;
 }
 
 @media screen and (max-width: 850px){
-
     .vl {
         display: none;
     }
@@ -75,6 +68,4 @@
     #reviews button {
         margin-bottom: 20px;
     }
-
-
 }
